@@ -19,14 +19,13 @@ def home():
 
 # this my web API
 # we provide some features to our ML model to return some outputs
-@app.route("predict", methods=["POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     '''
     For rendering results on HTML GUI
     '''
     # take all the values from the text fields in the html and store them in int_features variable
-    int_features = [int(x) for x in request.
-    from .values()]
+    int_features = [int(x) for x in request.from.values()]
 
     # change the values into pandas series
     sr_features = pd.Series(int_features)
